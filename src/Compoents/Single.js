@@ -5,8 +5,8 @@ const Comments = require('./Comments');
 
 class Single extends Component {
     render() {
-        console.log('Single props: ');
-        console.log(this.props);
+        // console.log('Single props: ');
+        // console.log(this.props);
         const {match, posts} = this.props;
         const id = Number(match.params.id);
         const post = posts.find((post) => post.id === id);

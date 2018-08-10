@@ -18,13 +18,15 @@ class AddPhoto extends Component {
                 description: description,
                 imageLink: imgLink
             };
-            this.props.addPost(post);
+            
+            this.props.startAddingPost(post);
+            // this.props.addPost(post);
             this.props.history.push('/');
         }
     }
     render() {
         // return <h1> This is the page where we will add photos. </h1>
-        console.log(this.props);
+        // console.log(this.props);
         return (           
             <div>                 
                 <div className='form'>
