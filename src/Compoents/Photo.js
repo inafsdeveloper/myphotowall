@@ -32,8 +32,9 @@ function Photo(props){
             <div className='button-container'> 
                 <button className='remove-button' 
                 onClick={()=>{
-                      props.removePost(props.index,post.id);
-                      props.history.push('/');
+                    //   props.removePost(props.index,post.id);
+                        props.startRemovingPost(props.index,post.id);
+                        props.history.push('/');
                     }} > Remove </button>
                 <Link className='comment-button' to={`/single/${post.id}`}> 
                     <div className='comment-count'>

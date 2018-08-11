@@ -9,7 +9,13 @@ const Link = Router.Link;
 const Single = require('./Single');
 
 class Main extends Component {
-      render() {
+
+    componentDidMount() {
+        this.props.startLoadingPosts();
+        this.props.startLoadingComments();
+    }
+
+    render() {
         console.log('Main - Props: ');
         console.log(this.props.comments);
         console.log(this.props.posts);

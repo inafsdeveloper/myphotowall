@@ -23,7 +23,8 @@ const comments = function(state=commentsD, action) {
                     delete state[action.postid];
                 }               
                 return state; 
-             
+        case 'LOAD_COMMENTS':
+                return action.comments;
         default: return state;
     }
     
@@ -42,6 +43,8 @@ const posts = function(state=postsD, action)  {
         case 'ADD_POST': 
             // console.log('add-post'); 
             return [...state, action.post];
+        case 'LOAD_POSTS':
+            return action.posts;
         default: return state;
     }    
 }

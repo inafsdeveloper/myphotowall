@@ -12,12 +12,13 @@ class Comments extends Component {
         event.preventDefault();
         // console.log();
         const comment =  event.target.elements.comment.value;
-        this.props.addComment(comment,this.props.id);
+        // this.props.addComment(comment,this.props.id);
+        this.props.startAddingComment(comment,this.props.id);
         event.target.elements.comment.value = '';
     }
 
     render() {
-        console.log(this.props.comments);
+        console.log(this.props);
         return (
             <div className='comment'>
                 {this.props.comments.map((comment, index) => {
