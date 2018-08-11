@@ -24,7 +24,7 @@ function Photo(props){
 
     const post = props.post;
     // console.log('Photo');
-    // console.log(props.index);
+    // console.log(props);
     return (
         <figure className='figure'>  
             <Link to={`/single/${post.id}`}> <img className='photo' src={post.imageLink} alt={post.description} /> </Link>                        
